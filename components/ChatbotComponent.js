@@ -1,4 +1,11 @@
 // ChatbotComponent.js
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 const ChatbotComponent = (apiEndpoint,color) => {
   const state = {
     userMessage: '',
@@ -101,7 +108,8 @@ const ChatbotComponent = (apiEndpoint,color) => {
 
     const button = document.createElement('button');
     button.textContent = 'Send';
-    button.style.backgroundColor=color;
+    //button.style.backgroundColor=color;
+    button.className= (color=='phnpe')? send-button-phnpe:
     button.addEventListener('click', handleSendMessage);
 
     const inputDiv = document.createElement('div');
