@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Example</title>
+</head>
+<body>
+  <script>
+    const apiEndpoint = 'https://fakestoreapi.com/products';
+    const color = 'red';
+  </script>
+<!-- Container for ChatbotComponent -->
+<div id="chatbot-container"></div>
+
+<script src="ChatbotComponent.js"></script>
+<script>
+  // Create an instance of ChatbotComponent
+  const chatbot = ChatbotComponent(apiEndpoint,color);
+
+  // Mount the ChatbotComponent in the container
+  chatbot.render();
+</script>
+
+</body>
+</html>
